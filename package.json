@@ -5,9 +5,10 @@
   "main": "dist/app.js",
   "scripts": {
     "start": "node dist/app.js",
-    "dev": "ts-node src/app.ts",
+    "dev": "ts-node source/app.ts",
     "build": "tsc",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint \"source/**/*.ts\"",
+    "test": "echo \"No tests specified\" && exit 0"
   },
   "keywords": [
     "weather",
@@ -17,14 +18,6 @@
   ],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "axios": "0.18.0",
-    "body-parser": "1.18.2",
-    "cors": "2.8.4",
-    "dotenv": "6.0.0",
-    "express": "4.16.0",
-    "morgan": "1.9.0"
-  },
   "devDependencies": {
     "@types/cors": "2.8.4",
     "@types/dotenv": "^8.2.3",
@@ -33,6 +26,9 @@
     "@types/node": "10.12.0",
     "@types/node-fetch": "^2.6.12",
     "ts-node": "^10.9.2",
-    "typescript": "^5.8.3"
+    "typescript": "^5.8.3",
+    "eslint": "^8.47.0",
+    "@typescript-eslint/parser": "^6.7.0",
+    "@typescript-eslint/eslint-plugin": "^6.7.0"
   }
 }
