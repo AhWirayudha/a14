@@ -26,7 +26,49 @@ npm start
 
 # Run in development mode
 npm run dev
+
+# Run tests
+npm test
+
+# Run tests with coverage
+npm run test:coverage
+
+# Run tests in watch mode
+npm run test:watch
+
+# Lint the code
+npm run lint
+
+# Clean build directory
+npm run clean
 ```
+
+## Testing
+
+The project includes comprehensive unit and integration tests:
+
+- **Unit Tests**: 35 tests covering all modules
+- **Coverage**: ~67% code coverage
+- **Integration Tests**: End-to-end API testing
+- **Mocking**: Database and external API calls are properly mocked
+
+### Test Files:
+- `tests/weatherService.test.ts` - Service layer tests
+- `tests/weatherController.test.ts` - Controller tests  
+- `tests/weatherModel.test.ts` - Model validation tests
+- `tests/database.test.ts` - Database operation tests
+- `tests/integration.test.ts` - API integration tests
+
+### CI/CD Pipeline
+
+The project includes a GitHub Actions workflow that:
+- Runs on Node.js 18
+- Installs dependencies with caching
+- Runs linting with ESLint
+- Executes all tests with coverage reporting
+- Builds the TypeScript project
+- Uploads coverage to Codecov
+- Runs SonarCloud analysis for code quality
 
 ## API Endpoints
 
